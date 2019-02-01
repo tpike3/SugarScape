@@ -71,7 +71,7 @@ def get_final(model):
     for sub_id, agents in model.ml.schedule.items():
         if agents.type == "resource":
             pass
-        elif agents.type == "meta": 
+        elif agents.type == "group": 
             agent_dict[sub_id] = agent_iter(agents,[] )
         else: 
             agent_dict[sub_id] = [sub_id]

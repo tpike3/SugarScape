@@ -71,7 +71,7 @@ def get_final(model_items, agent_dict, k):
     for sub_id, agents in model_items:
         if agents.type == "resource":
             pass
-        elif agents.type == "meta": 
+        elif agents.type == "group": 
             agent_dict[sub_id] = get_final(agents.sub_agents.items(), {sub_id:[]}, sub_id)
         else: 
             agent_dict[k].append(sub_id)

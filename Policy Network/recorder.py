@@ -43,7 +43,7 @@ def get_meta_details(model):
                 pass
         elif meta.type == "agent":
                 independents += 1 
-        elif meta.type == 'meta':
+        elif meta.type == 'group':
             if meta.policy != None:
                 meta_list.append([meta.unique_id, meta.policy.policy_type, \
                                   len(meta.sub_agents)])

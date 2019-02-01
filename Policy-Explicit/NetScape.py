@@ -168,7 +168,7 @@ class NetScape(Model):
                 count += 1
         print (count, len(self.ml.schedule), len(self.ml.agents_by_type[N.NetAgent]))
         '''
-        self.ml.form_group(ap.form_connection_group, self)#, policy = organization.rules)         
+        self.ml.form_group(ap.form_connection_group, self, policy = organization.rules)         
         self.ml.step() 
         time_step1 = time.time() - time_step0
         self.datacollector.collect(self)
