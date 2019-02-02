@@ -55,6 +55,6 @@ for run in range(100):
     survivors.append(agents)
     time.append(df["Time Per Step"].sum())
 
-pickle.dump(price_df, open("brute_total_price.p", "wb"))
-pickle.dump(survivors, open( "brute_multi_sur.p", "wb" ))
-pickle.dump(time, open("brute_multi_time.p", "wb"))
+#pickle.dump(price_df, open("brute_total_price.p", "wb"))
+#pickle.dump(survivors, open( "brute_multi_sur.p", "wb" ))
+#pickle.dump(time, open("brute_multi_time.p", "wb"))

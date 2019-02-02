@@ -163,7 +163,7 @@ class NetScape(Model):
         
         time_step0 = time.time()
         self.step_num += 1
-        print ("STEP ", self.step_num)
+        #print ("STEP ", self.step_num)
         self.ml.net_group(link_type = "trades", link_value = 10, policy = organization.rules)
         #self.ml.net_schedule(link_type = "trades", policy = organization.rules, group_net = True)
         #print (len(self.ml.groups), len(self.ml.schedule), len(self.ml.agents_by_type[N.NetAgent]))

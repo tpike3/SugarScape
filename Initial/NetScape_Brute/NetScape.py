@@ -160,7 +160,7 @@ class NetScape(Model):
     def step(self):
         time_step0 = time.time()
         self.step_num += 1
-        #print ("STEP ", self.step_num)
+        print ("STEP ", self.step_num)
         self.ml.form_group(ap.form_connection, self)        
         self.ml.step() 
         time_step1 = time.time() - time_step0

@@ -64,10 +64,10 @@ for run in range(100):
     final_groups["Run"+str(run)] = recorder.get_final(test)
     
     
-'''
-pickle.dump(final_groups, open("final_groups_10_policy_order.p", "wb"))
-pickle.dump(type_df, open("type_df_10_policy_order.p", "wb"))
-pickle.dump(price_df, open("total_price_10_policy_order.p", "wb"))
-pickle.dump(survivors, open("net_multi_sur_10_policy_order.p", "wb" ))
-pickle.dump(time2, open("net_multi_time_10_policy_order.p", "wb"))
-'''
+
+pickle.dump(final_groups, open("final_groups_10_policy.p", "wb"))
+pickle.dump(type_df, open("type_df_10_policy.p", "wb"))
+pickle.dump(price_df, open("total_price_10_policy.p", "wb"))
+pickle.dump(survivors, open("net_multi_sur_10_policy.p", "wb" ))
+pickle.dump(time2, open("net_multi_time_10_policy.p", "wb"))
+
