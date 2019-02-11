@@ -14,14 +14,13 @@ Adapted from Mesa 0.8.4 Jackie Kazil and David Masad
 
 from collections import defaultdict
 import time
-import itertools
 
 from mesa import Model
 from mesa.space import MultiGrid
 from mesa.datacollection import DataCollector
 
 
-from ml_mesa import ML_Mesa
+import multilevel_mesa as mlm
 import apto_processes as ap
 import Landscape
 import ResourceScape as R
@@ -64,7 +63,7 @@ class NetScape(Model):
         self.num_agents = 0
         #Mesa Agent Scheduler
         #self.schedule = schedule.RandomActivationByBreed(self)
-        self.ml = ML_Mesa(self)
+        self.ml = mlm.MultiLevel_Mesa(self)
         self.grid = MultiGrid(self.height, self.width, torus=True)
         self.regrow = regrow
         self.running = True

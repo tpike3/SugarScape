@@ -64,9 +64,10 @@ for run in range(100):
     final_groups["Run"+str(run)] = recorder.get_final(test.ml.schedule.items(), {"Independents":[]},"Independents")
     
     
-
+'''
 pickle.dump(final_groups, open("final_groups_ging10_policy.p", "wb"))
 pickle.dump(type_df, open("type_df_ging10_policy.p", "wb"))
 pickle.dump(price_df, open("total_price_ging10_policy.p", "wb"))
 pickle.dump(survivors, open("net_multi_sur_ging10_policy.p", "wb" ))
 pickle.dump(time2, open("net_multi_time_ging10_policy.p", "wb"))
+'''

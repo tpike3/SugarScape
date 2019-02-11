@@ -21,7 +21,7 @@ from mesa.space import MultiGrid
 from mesa.datacollection import DataCollector
 
 
-from ml_mesa import ML_Mesa
+import multilevel_mesa as mlm
 import Landscape
 import ResourceScape as R
 import NetAgent as N
@@ -65,7 +65,7 @@ class NetScape(Model):
         self.num_agents = 0
         #Mesa Agent Scheduler
         #self.schedule = schedule.RandomActivationByBreed(self)
-        self.ml = ML_Mesa(self, group_to_net = True)
+        self.ml = mlm.MultiLevel_Mesa(self, group_to_net = True)
         self.grid = MultiGrid(self.height, self.width, torus=True)
         self.regrow = regrow
         self.running = True
@@ -163,7 +163,7 @@ class NetScape(Model):
         
         time_step0 = time.time()
         self.step_num += 1
-        #print ("STEP ", self.step_num)
+        print ("STEP ", self.step_num)
         self.ml.net_group(link_type = "trades", link_value = 10, policy = organization.rules)
         #self.ml.net_schedule(link_type = "trades", policy = organization.rules, group_net = True)
         #print (len(self.ml.groups), len(self.ml.schedule), len(self.ml.agents_by_type[N.NetAgent]))

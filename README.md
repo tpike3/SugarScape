@@ -1,6 +1,6 @@
 # SugarScape
 
-Test model for [Multi-Level Mesa](https://github.com/tpike3/ml_mesa) using Sugarscape sugar and spice trade variation (Growing Artificial Societies by Rob Axtell and Joshua Epstein, 1996). 
+Test model for [Multi-Level Mesa](https://github.com/tpike3/ml_mesa) using Sugarscape sugar and spice trade variation (*Growing Artificial Societies* by Rob Axtell and Joshua Epstein, 1996). 
 
 This repository has three categories of Sugarscape.
 1. Testing against the base model: Initial
