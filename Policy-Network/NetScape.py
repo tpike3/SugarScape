@@ -162,7 +162,7 @@ class NetScape(Model):
         time_step0 = time.time()
         self.step_num += 1
         #print ("STEP ", self.step_num)
-        self.ml.net_group(link_type = "trades", link_value = 10)#, policy = organization.rules)
+        self.ml.net_group(link_type = "trades")#, link_value = 5)#, policy = organization.rules)
         #print (len(self.ml.metas), len(self.ml.schedule), len(self.ml.agents_by_type[N.NetAgent]))
         # can either just not put in the by type or can put in and skip it
         self.ml.step()

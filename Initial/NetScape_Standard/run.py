@@ -9,6 +9,7 @@ from NetScape import NetScape
 import visualization
 import recorder
 import pickle
+import time
 
 
 '''
@@ -32,25 +33,31 @@ price_record = test.price_record
 
 
 survivors = []
-time = []
+run_time = []
 price_df = {}
+total_time = []
 
 
 
-for run in range(100):
+for run in range(1):
     print ("Run: " + str(run))
+    start_time = time.time()
     test = NetScape(height = 50, width = 50, initial_population = 200, regrow = 1, seed = 42)
     
-    for s in range(1000):
+    for s in range(100):
         test.step()
     df = test.datacollector.get_table_dataframe("Time") 
     price_df["Run"+str(run)] = test.price_record
     agents = recorder.survivors(test)
     survivors.append(agents)
-    time.append(df["Time Per Step"].sum())
+    run_time.append(df["Time Per Step"].sum())
+    total_time.append(time.time() - start_time)
+    
+    
 
-pickle.dump(price_df, open("stan_total_price.p", "wb"))
-pickle.dump(survivors, open( "stan_multi_sur.p", "wb" ))
-pickle.dump(time, open("stan_multi_time.p", "wb"))
+#pickle.dump(price_df, open("stan_total_price.p", "wb"))
+#pickle.dump(survivors, open( "stan_multi_sur.p", "wb" ))
+#pickle.dump(time, open("stan_multi_time.p", "wb"))
 #print (survivors)
-#print (time)
+print (run_time)
+print (total_time)

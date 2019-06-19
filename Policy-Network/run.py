@@ -60,7 +60,7 @@ for run in range(100):
     survivors.append(agents[1][1])
     time2.append(df["Time Per Step"].sum())
     
-pickle.dump(type_df, open("type_df_10.p", "wb"))
-pickle.dump(price_df, open("total_price_10.p", "wb"))
-pickle.dump(survivors, open("net_multi_sur_10.p", "wb" ))
-pickle.dump(time2, open("net_multi_time_10.p", "wb"))
+pickle.dump(type_df, open("type_df.p", "wb"))
+pickle.dump(price_df, open("total_price.p", "wb"))
+pickle.dump(survivors, open("net_multi_sur.p", "wb" ))
+pickle.dump(time2, open("net_multi_time.p", "wb"))
