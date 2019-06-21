@@ -12,7 +12,7 @@ def form_connection_group(model):
         #Must pass in agent
         agents = [agent]
         for partner, num_trades in trades.items():
-            if num_trades >= 10:              
+            if num_trades >= 1:              
                 agents.append(partner)
         
         if len(agents)  > 1: 

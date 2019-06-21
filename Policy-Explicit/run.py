@@ -65,7 +65,7 @@ for run in range(100):
     time2.append(df["Time Per Step"].sum())
     
 
-pickle.dump(type_df, open("brute_type_df_10_policy.p", "wb"))
-pickle.dump(price_df, open("brute_total_price_10_policy.p", "wb"))
-pickle.dump(survivors, open("brute_multi_sur_10_policy.p", "wb" ))
-pickle.dump(time2, open("brute_multi_time_10_policy.p", "wb"))
+pickle.dump(type_df, open("brute_type_df_1.p", "wb"))
+pickle.dump(price_df, open("brute_total_price_1.p", "wb"))
+pickle.dump(survivors, open("brute_multi_sur_1.p", "wb" ))
+pickle.dump(time2, open("brute_multi_time_1.p", "wb"))
