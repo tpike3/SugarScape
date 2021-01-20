@@ -106,7 +106,8 @@ class NetScape(Model):
         #fills in empty grids with null value resource agent        
         #Deviation from GrAS -- in empty cells has random resource from 0 to 4
         for a,x,y in self.grid.coord_iter():
-            if a == set():
+            #print(type(a), len(a))
+            if len(a) == 0:
                 resource = R.resource((x,y), self, \
                                       (self.random.randrange(0,2), \
                                        self.random.randrange(0,2)),self.regrow)

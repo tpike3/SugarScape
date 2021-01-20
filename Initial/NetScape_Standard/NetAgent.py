@@ -185,7 +185,6 @@ class NetAgent(Agent):
         meta = self.metabolism["sug_bolism"] + self.metabolism["spice_bolism"]
         sug_welfare = sugar**(self.metabolism["sug_bolism"]/meta)
         spice_welfare = spice**(self.metabolism["spice_bolism"]/meta)
-        
        
         if isinstance(sug_welfare, complex):
             sug_welfare = 0
@@ -212,7 +211,6 @@ class NetAgent(Agent):
             if agent.type == "resource":
                 poss_sug = self.accumulations[1.0] + agent.value_sug
                 poss_spice = self.accumulations[2.0] +agent.value_spice
-                
                 welfare_poss = self.poss_welfare(poss_sug, poss_spice)
                 return (welfare_poss[0] * welfare_poss[1])
       
@@ -251,7 +249,7 @@ class NetAgent(Agent):
         
         #Provides possibility of not moving
         neighbors.append(self.pos)
-       # print ([self.assess_sustenance(pos) for pos in neighbors])
+        # print ([self.assess_sustenance(pos) for pos in neighbors])
         # Look for location with the most welfare
         max_welfare = max([self.assess_sustenance(pos) for pos in neighbors])
         
